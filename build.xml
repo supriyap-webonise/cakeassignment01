@@ -22,15 +22,15 @@
     </if>
     <fail if="status" message="Test Case failed" />
     </target>
-    <!--<target name="build" depends="lint,  phpcs">
+    <target name="build" depends="lint,  phpcs">
     </target>
     <target name="lint">
         <echo msg="make dir..." />
         <mkdir dir="${basedir}"/>
         <mkdir dir="${basedir}/phpcs/"/>
-        &lt;!&ndash;<mkdir dir="${output}/pdepend/"/>&ndash;&gt;
+        <!--<mkdir dir="${output}/pdepend/"/>-->
     </target>
-    <target name="phpcs">
+    <target name="phpcs" output="${logdir}/phpcstest.log">
         <echo msg="PHP CS..." />
         <exec executable="phpcs">
             <arg line="-report=checkstyle
@@ -38,5 +38,5 @@
                         -standard=PHPTEAM
                         ${basedir}" />
         </exec>
-    </target>-->
+    </target>
 </project>
