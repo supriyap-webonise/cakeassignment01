@@ -32,7 +32,7 @@
     </target>-->
     <target name="phpcs">
         <echo msg="PHP CS..." />
-        <exec dir="${appdir}" executable="phpcs" output="${logdir}/phpcstest.log">
+        <exec dir="${appdir}" executable="phpcs" output="${logdir}/phpcstest1.log">
             <arg line="--report=checkstyle
                         --report-file=checkstyle.xml
                         --standard=PHPTEAM
