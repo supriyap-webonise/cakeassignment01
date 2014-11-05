@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="cakeAssignment01" default="phpunit">
+<project name="cakeAssignment01" default="phpcs">
     <property name="basedir" value="${phing.dir}" />
     <property name="appdir"  value="${basedir}/app" />
     <property name="logdir"  value="${basedir}/build/log" />
     <property name="cakeTestOutPut" value="" />
-    <target name="phpunit" description="Run CakePHP unit tests with PHPUnit">
+    <!--<target name="phpunit" description="Run CakePHP unit tests with PHPUnit">
     <exec dir="${appdir}" executable="${appdir}/Console/cake" output="${logdir}/caketest.log"  returnProperty="cakeTestOutPut">
     <arg line="test" />
     <arg line="app" />
-    <arg line="--stderr" />
+    <arg line="-stderr" />
     <arg line="AllTests" />
     </exec>
     <echo message="${cakeTestOutPut}"/>
@@ -21,7 +21,7 @@
     </else>
     </if>
     <fail if="status" message="Test Case failed" />
-    </target>
+    </target>-->
     <target name="build" depends="lint,  phpcs">
     </target>
     <target name="lint">
@@ -33,9 +33,9 @@
     <target name="phpcs">
         <echo msg="PHP CS..." />
         <exec dir="${appdir}" executable="phpcs" output="${logdir}/phpcstest.log">
-            <arg line="-report=checkstyle
-                        -report-file=${basedir}/phpcs/checkstyle.xml
-                        -standard=PHPTEAM
+            <arg line="--report=checkstyle
+                        --report-file=${basedir}/phpcs/checkstyle.xml
+                        --standard=PHPTEAM
                         ${basedir}" />
         </exec>
     </target>
