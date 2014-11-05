@@ -35,7 +35,7 @@
         <exec dir="${appdir}" executable="phpcs" output="${logdir}/phpcstest.log">
             <arg line="--report=checkstyle
                         --report-file=checkstyle.xml
-                        --standard=/home/webonise/projects/php/app2014/PHPTEAM
+                        --standard=PHPTEAM
                         ${basedir}" />
         </exec>
     </target>
