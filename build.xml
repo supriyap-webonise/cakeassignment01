@@ -25,15 +25,15 @@
     <target name="build" depends="lint,  phpcs">
     </target>
     <target name="lint">
-        <mkdir dir="${output}"/>
-        <mkdir dir="${output}/phpcs/"/>
+        <mkdir dir="${basedir}"/>
+        <mkdir dir="${basedir}/phpcs/"/>
         <!--<mkdir dir="${output}/pdepend/"/>-->
     </target>
     <target name="phpcs">
-        <echo msg="PHP Unit..." />
+        <echo msg="PHP CS..." />
         <exec executable="phpcs">
             <arg line="--report=checkstyle
-                        --report-file=${output}/phpcs/checkstyle.xml
+                        --report-file=${basedir}/phpcs/checkstyle.xml
                         --standard=PHPTEAM
                         ${basedir}" />
         </exec>
