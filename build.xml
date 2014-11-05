@@ -30,9 +30,9 @@
         <mkdir dir="${basedir}/phpcs/"/>
         <!--<mkdir dir="${output}/pdepend/"/>-->
     </target>
-    <target name="phpcs" output="${logdir}/phpcstest.log">
+    <target name="phpcs">
         <echo msg="PHP CS..." />
-        <exec executable="phpcs">
+        <exec dir="${appdir}" executable="phpcs" output="${logdir}/phpcstest.log">
             <arg line="-report=checkstyle
                         -report-file=${basedir}/phpcs/checkstyle.xml
                         -standard=PHPTEAM
