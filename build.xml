@@ -35,7 +35,7 @@
         <exec dir="${appdir}" executable="phpcs" output="${logdir}/phpcstest.log">
             <arg line="--report=checkstyle
                         --report-file=checkstyle.xml
-                        --standard=phpcs_rules
+                        --standard=PHPTEAM
                         ${basedir}" />
         </exec>
     </target>
