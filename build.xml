@@ -8,7 +8,7 @@
     <!--<exec dir="${appdir}" executable="${appdir}/Console/cake" output="${logdir}/caketest.log"  returnProperty="cakeTestOutPut">-->
     <!--<arg line="test" />-->
     <!--<arg line="app" />-->
-    <!--<arg line="--stderr" />-->
+    <!--<arg line="-stderr" />-->
     <!--<arg line="AllTests" />-->
     <!--</exec>-->
     <!--<echo message="${cakeTestOutPut}"/>-->
