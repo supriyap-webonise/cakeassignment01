@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="cakeAssignment01" default="phpunit">
+<project name="cakeAssignment01" default="phpcs">
     <property name="basedir" value="${phing.dir}" />
     <property name="appdir"  value="${basedir}/app" />
     <property name="logdir"  value="${basedir}/build/log" />
