@@ -22,19 +22,19 @@
     </if>
     <fail if="status" message="Test Case failed" />
     </target>-->
-    <target name="build" depends="lint,  phpcs">
+    <target name="build" depends="phpcs">
     </target>
-    <target name="lint">
+    <!--<target name="lint">
         <echo msg="make dir..." />
         <mkdir dir="${basedir}"/>
         <mkdir dir="${basedir}/phpcs/"/>
-        <!--<mkdir dir="${output}/pdepend/"/>-->
-    </target>
+        &lt;!&ndash;<mkdir dir="${output}/pdepend/"/>&ndash;&gt;
+    </target>-->
     <target name="phpcs">
         <echo msg="PHP CS..." />
         <exec dir="${appdir}" executable="phpcs" output="${logdir}/phpcstest.log">
             <arg line="--report=checkstyle
-                        --report-file=${basedir}/phpcs/checkstyle.xml
+                        --report-file=${basedir}/build/log/phpcs.xml
                         --standard=PHPTEAM
                         ${basedir}" />
         </exec>
