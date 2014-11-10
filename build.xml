@@ -31,13 +31,13 @@
         <mkdir dir="${basedir}/phpcs/"/>
         &lt;!&ndash;<mkdir dir="${output}/pdepend/"/>&ndash;&gt;
     </target>-->
-    <target name="phpcs">
+    <!--<target name="phpcs">
         <echo msg="PHP CS..." />
         <exec dir="${appdir}" executable="phpcs" output="${logdir}/phpcstest.log" returnProperty="phpcsTestOutPut">
-            <arg line="--report=checkstyle
-                        --report-file=${logdir}/checkstyle.xml
-                        --standard=PHPTEAM
-                         --extensions=php
+            <arg line="-report=checkstyle
+                        -report-file=${logdir}/checkstyle.xml
+                        -standard=PHPTEAM
+                         -extensions=php
                         ${basedir}" />
         </exec>
             <echo message="${phpcsTestOutPut}"/>
@@ -52,5 +52,14 @@
             <fail if="status" message="PHPCS Test Failed" />
         <echo message="$(status)"/>
 
+    </target>-->
+    <target name="phpcs"
+            description="Generate checkstyle.xml using PHP_CodeSniffer">
+        <exec command="phpcs --report=checkstyle
+                    --report-file=${logdir}/checkstyle.xml
+                    --standard=PHPTEAM
+                    --extensions=php
+                    ${basedir}"
+              logoutput="true" />
     </target>
 </project>
