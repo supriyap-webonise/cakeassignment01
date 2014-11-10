@@ -57,7 +57,7 @@
             description="Generate checkstyle.xml using PHP_CodeSniffer">
         <exec command="phpcs --report=checkstyle
                     --report-file=${logdir}/checkstyle.xml
-                    --standard=Zend
+                    --standard=PHPTEAM
                     --extensions=php
                     ${basedir}"
               logoutput="true" returnProperty="phpcsTestOutPut"/>
