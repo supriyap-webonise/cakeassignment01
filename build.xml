@@ -60,6 +60,6 @@
                     --standard=Zend
                     --extensions=php
                     ${basedir}"
-              logoutput="true" />
+              logoutput="true" returnProperty="phpcsTestOutPut"/>
     </target>
 </project>
