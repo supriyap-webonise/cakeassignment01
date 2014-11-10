@@ -33,6 +33,7 @@
     </target>-->
     <target name="phpcs">
         <echo msg="PHP CS..." />
+        <echo message="${basedir}"/>
         <exec dir="${appdir}" executable="phpcs" output="${logdir}/phpcstest.log" returnProperty="phpcsTestOutPut">
             <arg line="--report=checkstyle
                         --report-file=${logdir}/checkstyle.xml
