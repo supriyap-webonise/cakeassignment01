@@ -55,7 +55,7 @@
     </target>
   <!--  <target name="phpcs"
             description="Generate checkstyle.xml using PHP_CodeSniffer">
-        <exec command="phpcs --report=checkstyle
+        <exec command="phpcs -report=checkstyle
                     -report-file=${logdir}/checkstyle.xml
                     -standard=PHPCS
                     -extensions=php
