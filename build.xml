@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="cakeAssignment01" default="phpcs">
-    <!--<property name="basedir" value="${phing.dir}" />-->
-    <property name="appdir"  value="app" />
-    <property name="logdir"  value="build/log" />
+    <property name="basedir" value="." />
+    <property name="appdir"  value="${basedir}/app" />
+    <property name="logdir"  value="${basedir}/build/log" />
     <property name="phpcsTestOutPut" value="" />
     <property name="cakeTestOutPut" value="" />
     <!--<target name="phpunit" description="Run CakePHP unit tests with PHPUnit">
