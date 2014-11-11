@@ -46,7 +46,7 @@
         <exec dir="${appdir}" executable="phpcs" output="${logdir}/phpcstest.log" returnProperty="phpcsTestOutPut">
             <arg line="--report=checkstyle
                         --report-file=${logdir}/checkstyle.xml
-                        --standard=Zend
+                        --standard=PHPTEAM
                          --extensions=php
                         ${basedir}" />
         </exec>
@@ -60,7 +60,6 @@
             </else>
         </if>
        <!-- <fail if="status" message="PHPCS Test Failed" />-->
-        <echo message="$(status)"/>
 
     </target>
 </project>
