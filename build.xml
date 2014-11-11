@@ -47,8 +47,8 @@
             <arg line="--report=checkstyle
                         --report-file=${logdir}/checkstyle.xml
                         --standard=PHPTEAM
-                         --extensions=php
-                        ${basedir}" />
+
+                        ${basedir}/app" />
         </exec>
         <echo message="${phpcsTestOutPut}"/>
         <if>
