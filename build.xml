@@ -49,7 +49,7 @@
                         --report-file=${logdir}/checkstyle.xml
                         --standard=PHPTEAM
                          --extensions=php
-                        ${basedir}" />
+                        ${controllerdir}" />
         </exec>
         <echo message="${phpcsTestOutPut}"/>
         <if>
