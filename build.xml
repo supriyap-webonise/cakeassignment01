@@ -2,6 +2,7 @@
 <project name="cakeAssignment01" default="phpcs">
     <property name="basedir" value="${phing.dir}" />
     <property name="appdir"  value="${basedir}/app" />
+    <property name="controllerdir"  value="${basedir}/app/Controller" />
     <property name="logdir"  value="${basedir}/build/log" />
     <property name="phpcsTestOutPut" value="" />
     <property name="cakeTestOutPut" value="" />
