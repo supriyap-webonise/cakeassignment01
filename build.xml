@@ -48,7 +48,7 @@
                         --report-file=${logdir}/checkstyle.xml
                         --standard=PHPTEAM
 
-                        ${basedir}/app" />
+                        ${basedir}/app/Controller" />
         </exec>
         <echo message="${phpcsTestOutPut}"/>
         <if>
