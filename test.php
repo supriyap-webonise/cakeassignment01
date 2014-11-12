@@ -1,3 +1,3 @@
 <?php
-    echo 'Current script owner: ';
+    $a=1;
 ?>
